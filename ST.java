@@ -1,8 +1,9 @@
+import java.lang.reflect.Type;
 import java.util.Arrays;
 
 public class ST {
     public static void main(String[] args ) {
-        
+        System.out.println(number(4421));
     }
     /**
      * Реализовать функцию возведения числа а в степень b. a, b ∈ Z. 
@@ -44,7 +45,34 @@ public class ST {
      * или к1, к2, к1, к1, к1 
      * или к1, к1, к2, к1. 
      */
-    public static void name() {
-        
+    public static StringBuilder MyYes(int a,int b) {
+        StringBuilder patch = new StringBuilder();
+        int c = a;
+        int[] dd = new int[b];
+        String ss = dd.toString();
+        System.out.println(ss);
+        while (c > 0){
+            for (int i = 0; i < b; i++) {     
+                patch.append("0");    
+            }
+            c--;
+        }
+        return patch;
     }
+    /** Given an integer number n, return the difference 
+     * between the product of its digits and the sum of its digits.
+    */    
+    public static int number(int a) {
+        int prod = 1;
+        int sum = 0;
+        int i = a;
+        while (i > 0){
+            prod *= i % 10;
+            sum += i % 10;
+            i = i / 10;
+        }
+        int result = prod - sum;
+        return result;
+    }
+    
 }
