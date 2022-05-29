@@ -3,7 +3,10 @@ import java.util.Arrays;
 
 public class ST {
     public static void main(String[] args ) {
-        System.out.println(number(4421));
+        // char[] k = {'s', 's', 'o', 'b'};
+        // printReverse(k);
+        System.out.print( powRec(5, -3));
+        
     }
     /**
      * Реализовать функцию возведения числа а в степень b. a, b ∈ Z. 
@@ -73,6 +76,17 @@ public class ST {
         }
         int result = prod - sum;
         return result;
+    }
+    private static void printReverse(char[] string) {
+        helper(0, string);
+    }
+      
+    private static void helper(int index, char[] str) {
+        if (str == null || index >= str.length) {
+        return;
+    }
+        helper(index + 1, str);
+        System.out.print(str[index]);
     }
     
 }
